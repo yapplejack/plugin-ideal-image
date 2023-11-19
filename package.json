@@ -1,11 +1,12 @@
 {
   "name": "@yapplejack/plugin-ideal-image",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Docusaurus Plugin to generate an almost ideal image (responsive, lazy-loading, and low quality placeholder).",
   "main": "lib/index.js",
   "types": "src/plugin-ideal-image.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc --build && node ../../admin/scripts/copyUntypedFiles.js && prettier --config ../../.prettierrc --write \"lib/theme/**/*.js\"",
+    "build": "tsc --build && node ./copyUntypedFiles.js && prettier --config ./.prettierrc --write \"lib/theme/**/*.js\"",
     "watch": "run-p -c copy:watch build:watch",
     "build:watch": "tsc --build --watch",
     "copy:watch": "node ../../admin/scripts/copyUntypedFiles.js --watch"
@@ -33,7 +34,10 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.0",
-    "fs-extra": "^11.1.0"
+    "fs-extra": "^11.1.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.4",
+    "stylelint-config-prettier": "^9.0.5"
   },
   "peerDependencies": {
     "jimp": "*",
