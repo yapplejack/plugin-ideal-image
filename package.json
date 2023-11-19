@@ -1,5 +1,5 @@
 {
-  "name": "@docusaurus/plugin-ideal-image",
+  "name": "@yapplejack/plugin-ideal-image",
   "version": "3.0.0",
   "description": "Docusaurus Plugin to generate an almost ideal image (responsive, lazy-loading, and low quality placeholder).",
   "main": "lib/index.js",
@@ -15,8 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/docusaurus.git",
-    "directory": "packages/docusaurus-plugin-ideal-image"
+    "url": "https://github.com/yapplejack/plugin-ideal-image.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -46,6 +45,7 @@
       "optional": true
     }
   },
+  
   "engines": {
     "node": ">=18.0"
   }
