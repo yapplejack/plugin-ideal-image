@@ -9,10 +9,10 @@ import React from 'react';
 import ReactIdealImage, {
   type IconKey,
   type State,
-} from '@yapplejack/react-ideal-image';
-import {translate} from '@docusaurus/Translate';
+} from '@slorber/react-ideal-image';
+import { translate } from '@docusaurus/Translate';
 
-import type {Props} from '@theme/IdealImage';
+import type { Props } from '@theme/IdealImage';
 
 // Adopted from https://github.com/endiliey/react-ideal-image/blob/master/src/components/helpers.js#L59-L65
 function bytesToSize(bytes: number) {
@@ -41,8 +41,8 @@ function getMessage(icon: IconKey, state: State) {
       });
     case 'load': {
       // We can show `alt` here
-      const {pickedSrc} = state;
-      const {size} = pickedSrc;
+      const { pickedSrc } = state;
+      const { size } = pickedSrc;
       const sizeMessage = size ? ` (${bytesToSize(size)})` : '';
       return translate(
         {
@@ -51,7 +51,7 @@ function getMessage(icon: IconKey, state: State) {
           description:
             'To prompt users to load the full image. sizeMessage is a parenthesized size figure.',
         },
-        {sizeMessage},
+        { sizeMessage },
       );
     }
     case 'offline':
@@ -61,7 +61,7 @@ function getMessage(icon: IconKey, state: State) {
         description: 'When the user is viewing an offline document',
       });
     case 'error': {
-      const {loadInfo} = state;
+      const { loadInfo } = state;
       if (loadInfo === 404) {
         return translate({
           id: 'theme.IdealImageMessage.404error',
@@ -81,7 +81,7 @@ function getMessage(icon: IconKey, state: State) {
 }
 
 export default function IdealImage(props: Props): JSX.Element {
-  const {img, ...propsRest} = props;
+  const { img, ...propsRest } = props;
 
   // In dev env just use regular img with original file
   if (typeof img === 'string' || 'default' in img) {
@@ -96,7 +96,7 @@ export default function IdealImage(props: Props): JSX.Element {
       {...propsRest}
       height={img.src.height ?? 100}
       width={img.src.width ?? 100}
-      placeholder={{lqip: img.preSrc}}
+      placeholder={{ lqip: img.preSrc }}
       src={img.src.src}
       srcSet={img.src.images.map((image) => ({
         ...image,

@@ -3,7 +3,6 @@ tsconfig*
 __tests__
 maintsconfig*
 .gitignore
-/src
 /node_modules
 package-lock*
 .prettierrc
