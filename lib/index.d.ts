@@ -5,6 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 import type { LoadContext, Plugin, OptionValidationContext } from '@docusaurus/types';
-import type { PluginOptions } from '@docusaurus/plugin-ideal-image';
+import type { PluginOptions } from '@yapplejack/docusaurus-plugin-ideal-image';
 export default function pluginIdealImage(context: LoadContext, options: PluginOptions): Plugin<void>;
 export declare function validateOptions({ validate, options, }: OptionValidationContext<PluginOptions, PluginOptions>): PluginOptions;

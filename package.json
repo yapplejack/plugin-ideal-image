@@ -1,6 +1,6 @@
 {
-  "name": "@yapplejack/plugin-ideal-image",
-  "version": "0.0.4",
+  "name": "@yapplejack/docusaurus-plugin-ideal-image",
+  "version": "0.0.5",
   "description": "Docusaurus Plugin to generate an almost ideal image (responsive, lazy-loading, and low quality placeholder).",
   "main": "lib/index.js",
   "types": "src/plugin-ideal-image.d.ts",
@@ -34,10 +34,11 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.0",
-    "fs-extra": "^11.1.0",
     "eslint-config-prettier": "^8.8.0",
+    "fs-extra": "^11.1.0",
     "prettier": "^2.8.4",
-    "stylelint-config-prettier": "^9.0.5"
+    "stylelint-config-prettier": "^9.0.5",
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
     "jimp": "*",

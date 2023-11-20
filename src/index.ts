@@ -5,21 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {Joi} from '@docusaurus/utils-validation';
-import {readDefaultCodeTranslationMessages} from '@docusaurus/theme-translations';
+import { Joi } from '@docusaurus/utils-validation';
+import { readDefaultCodeTranslationMessages } from '@docusaurus/theme-translations';
 import type {
   LoadContext,
   Plugin,
   OptionValidationContext,
 } from '@docusaurus/types';
-import type {PluginOptions} from '@docusaurus/plugin-ideal-image';
+import type { PluginOptions } from '@yapplejack/docusaurus-plugin-ideal-image';
 
 export default function pluginIdealImage(
   context: LoadContext,
   options: PluginOptions,
 ): Plugin<void> {
   const {
-    i18n: {currentLocale},
+    i18n: { currentLocale },
   } = context;
 
   return {
@@ -41,7 +41,7 @@ export default function pluginIdealImage(
     },
 
     configureWebpack(_config, isServer) {
-      const {disableInDev, ...loaderOptions} = options;
+      const { disableInDev, ...loaderOptions } = options;
       if (disableInDev && process.env.NODE_ENV !== 'production') {
         return {};
       }

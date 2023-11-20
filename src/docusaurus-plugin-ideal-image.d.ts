@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-declare module '@docusaurus/plugin-ideal-image' {
+declare module '@yapplejack/docusaurus-plugin-ideal-image' {
   export type PluginOptions = {
     /**
      * Filename template for output files.
@@ -52,7 +52,7 @@ declare module '@docusaurus/plugin-ideal-image' {
 }
 
 declare module '@theme/IdealImage' {
-  import type {ComponentProps} from 'react';
+  import type { ComponentProps } from 'react';
 
   export type SrcType = {
     width: number;
@@ -70,7 +70,7 @@ declare module '@theme/IdealImage' {
   };
 
   export interface Props extends ComponentProps<'img'> {
-    readonly img: {default: string} | {src: SrcImage; preSrc: string} | string;
+    readonly img: { default: string } | { src: SrcImage; preSrc: string } | string;
   }
   export default function IdealImage(props: Props): JSX.Element;
 }

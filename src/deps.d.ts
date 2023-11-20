@@ -13,7 +13,7 @@
  * full state object.
  */
 declare module '@yapplejack/react-ideal-image' {
-  import type {ComponentProps, ComponentType, CSSProperties} from 'react';
+  import type { ComponentProps, ComponentType, CSSProperties } from 'react';
 
   export type LoadingState = 'initial' | 'loading' | 'loaded' | 'error';
 
@@ -69,7 +69,7 @@ declare module '@yapplejack/react-ideal-image' {
      * from material design, Implemented as React components with the SVG
      * element. You can customize icons
      */
-    icons?: Partial<{[icon in IconKey]: ComponentType}>;
+    icons?: Partial<{ [icon in IconKey]: ComponentType }>;
     /**
      * This prop takes one of the 2 options, xhr and image.
      * Read more about it:
@@ -79,7 +79,7 @@ declare module '@yapplejack/react-ideal-image' {
     /**
      * https://github.com/stereobooster/react-ideal-image/blob/master/introduction.md#lqip
      */
-    placeholder: {color: string} | {lqip: string};
+    placeholder: { color: string } | { lqip: string };
     /**
      * This function decides if image should be downloaded automatically. The
      * default function returns false for a 2g network, for a 3g network it
@@ -103,7 +103,7 @@ declare module '@yapplejack/react-ideal-image' {
      * inline styles, but it is also possible to use CSS modules and override
      * all styles.
      */
-    theme?: Partial<{[key in ThemeKey]: string | CSSProperties}>;
+    theme?: Partial<{ [key in ThemeKey]: string | CSSProperties }>;
     /**
      * Tells how much to wait in milliseconds until consider the download to be
      * slow.
