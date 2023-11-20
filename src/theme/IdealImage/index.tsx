@@ -9,7 +9,7 @@ import React from 'react';
 import ReactIdealImage, {
   type IconKey,
   type State,
-} from '@slorber/react-ideal-image';
+} from '@yapplejack/react-ideal-image';
 import { translate } from '@docusaurus/Translate';
 
 import type { Props } from '@theme/IdealImage';
