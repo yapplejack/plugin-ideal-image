@@ -1,8 +1,11 @@
 .tsbuildinfo*
 tsconfig*
 __tests__
-manistsconfig*
+maintsconfig*
 .gitignore
 /src
 /node_modules
-package-locl*
+package-lock*
+.prettierrc
+copyUntypedFiles*
+/.github
